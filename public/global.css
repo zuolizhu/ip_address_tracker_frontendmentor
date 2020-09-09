@@ -1,0 +1,129 @@
+:root {
+  /* Colors */
+  --color-mid-gray: hsl(0, 0%, 59%);
+  --color-dark-gray: hsl(0, 0%, 17%);
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-mid: 500;
+  --weight-bold: 700;
+
+  /* Design Elements */
+  --transition: 300ms ease-in-out;
+}
+
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--color-white);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.sr-only {
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  border: 0;
+}
+
+/* Type Specs */
+.t-h1 {
+  line-height: 3rem;
+  font-size: 2.6rem;
+  letter-spacing: -.23px;
+  font-weight: var(--weight-mid);
+}
+@media (min-width: 768px) {
+  .t-h1 {
+    font-size: 3.2rem;
+    letter-spacing: -.29px;
+  }
+}
+
+.t-h2 {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  letter-spacing: 1.46px;
+  text-transform: uppercase;
+  font-weight: var(--weight-bold);
+}
+@media (min-width: 768px) {
+  .t-h2 {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    letter-spacing: 1.75px;
+  }
+}
+
+.t-body {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: -.18px;
+  font-weight: var(--weight-mid);
+}
+@media (min-width: 768px) {
+  .t-body {
+    font-size: 2.6rem;
+    line-height: 3rem;
+    letter-spacing: -.23px;
+  }
+}
+
+.t-white {
+  color: var(--color-white);
+}
+.t-mid-gray {
+  color: var(--color-mid-gray);
+}
+.t-dark-gray {
+  color: var(--color-dark-gray);
+}
+
+.button {
+  border: none;
+  outline: none;
+  background: none;
+  display: inline-flex;
+}
+
+.button--search {
+  width: 5.8rem;
+  height: 5.8rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 1.5rem 1.5rem 0;
+  background-color: var(--color-black);
+  transition: var(--transition) background-color;
+}
+
+.button--search:hover {
+  background-color: #3f3f3f;
+}
