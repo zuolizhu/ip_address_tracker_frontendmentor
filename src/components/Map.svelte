@@ -1,15 +1,14 @@
 <script>
   import * as Leaflet from 'leaflet';
+  import { afterUpdate } from 'svelte';
 
   let map;
   let mapCtrl;
   let marker;
   
   // default location is set to New York City
-  export let location = {
-    lat: 40.7167,
-    lng: -74.0067
-  };
+  export let lat = 40.7167;
+  export let lng = -74.0067;
 
   const Location_Marker = Leaflet.icon({
     iconUrl: '/assets/images/icon-location.svg',
@@ -25,9 +24,14 @@
     }
   }
 
+  afterUpdate(() => {
+    map.panTo([lat, lng], 14);
+    marker.setLatLng([lat, lng]);
+  });
+
   function createMap(container) {
     // map init center
-    mapCtrl = Leaflet.map(container, { zoomControl: false }).setView([location.lat, location.lng], 14);
+    mapCtrl = Leaflet.map(container, { zoomControl: false }).setView([lat, lng], 14);
     // map tile layer
     Leaflet.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
       attribution: `&copy;<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>`,

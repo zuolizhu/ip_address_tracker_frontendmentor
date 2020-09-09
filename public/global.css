@@ -82,6 +82,14 @@ p {
   }
 }
 
+.t-h3 {
+  font-size: 1.8rem;
+  letter-spacing: 0;
+  line-height: 2.2rem;
+  color: var(--color-mid-gray);
+  font-weight: var(--weight-regular);
+}
+
 .t-body {
   font-size: 2rem;
   line-height: 2.4rem;
