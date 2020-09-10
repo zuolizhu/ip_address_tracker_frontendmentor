@@ -17,7 +17,7 @@
   let resultTimeZone;
   let resultISP;
 
-  let debug = true;
+  let debug = false;
 
   function updateMapLocation(updatedResult) {
     const result = {
