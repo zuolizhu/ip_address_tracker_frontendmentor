@@ -17,7 +17,7 @@
   let resultTimeZone;
   let resultISP;
 
-  let debug = false;
+  let debug = true;
 
   function updateMapLocation(updatedResult) {
     const result = {
@@ -184,7 +184,7 @@
   .input-group__input,
   .input-group__input::placeholder {
     font-size: 1.8rem;
-    letter-spacing: 0;
+    letter-spacing: .26px;
     line-height: 2.2rem;
     color: var(--color-dark-gray);
     font-weight: var(--weight-regular);
@@ -278,6 +278,7 @@
       width: .1rem;
       opacity: .15;
       height: 7.5rem;
+      align-self: center;
       display: inline-block;
       background-color: var(--color-black);
     }

@@ -125,6 +125,7 @@ p {
   width: 5.8rem;
   height: 5.8rem;
   cursor: pointer;
+  min-width: 5.8rem;
   align-items: center;
   justify-content: center;
   border-radius: 0 1.5rem 1.5rem 0;
